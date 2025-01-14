@@ -52,6 +52,8 @@ source_suffix = [".rst", ".md"]
 #
 html_theme = 'sphinx_rtd_theme'
 
+html_logo = "ressources/img/openmanipulator_logo.png"
+
 html_sidebars = {
     '**': [
         'globaltoc.html',   # Use the global TOC instead of the local one
