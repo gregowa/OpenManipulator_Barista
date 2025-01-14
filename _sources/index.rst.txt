@@ -1,18 +1,11 @@
-.. latex_tutorial documentation master file, created by
-   sphinx-quickstart on Sun Jan 12 18:45:57 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-latex_tutorial documentation
+Documentation LaTeX by Gooze
 ============================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
-
+Cette documentation explique comment installer et utiliser LaTeX.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-
+   :caption: Tables des matières
+   
+   intro
+   tutoriel

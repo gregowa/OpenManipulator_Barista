@@ -9,12 +9,12 @@ pre {
     text-decoration: underline;
 }
 
-/* This allows the content to use most of the screen */
-@media (min-width: 1200px) {
-    .wy-nav-content {
-        max-width: 95%;
-        /* This allows the content to use most of the screen */
-    }
+/* Set a maximum width for the content and align it to the left */
+.wy-nav-content {
+    max-width: 800px;
+    /* Ajustez cette valeur selon vos besoins */
+    margin-left: 0;
+    margin-right: auto;
 }
 
 /** Allow caption from toctree to wrap nicely in sidebar */
