@@ -1,4 +1,4 @@
-Installation
+Configuration
 ============
 
 Cette section explique comment installer et configurer les différents éléments du projet.
@@ -14,12 +14,12 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 4. Configuration du clavier en azerty
 5. Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + sudo netplan apply une fois les modifications terminées
 6. Vérifier que la connexion est active : Commande ip a pour voir si la connexion est active, si à l'état down :
-.. code-block:: language
+.. code-block:: bash
 
    sudo ip linksetwlan0 up
 
 7. Récupérer les mises à jour nécessaires : 
-.. code-block:: language
+.. code-block:: bash
 
 	sudo apt update
 	sudo apt upgrade
@@ -31,13 +31,15 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 Configuration pour la PiCamera
 ----------------------
 
+A compléter
+
 Configuration pour l'OpenManipulator
 ______________________
 
 1. Installation de ros2launch
 2. Installation des outils pour OpenManipulator
 3. Aller au bashrc
-.. code-block:: language
+.. code-block:: bash
 	source~/.bashrc 
 
 4. sudo apt-get install ros-noetic-ros-controllers ros-noetic-gazebo* ros-noetic-moveit* ros-noetic-industrial-core
