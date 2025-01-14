@@ -15,4 +15,5 @@ Cette documentation explique comment installer et utiliser un OpenManipulator. U
    :caption: Tables des matières
    
    intro
-   tutoriel
+   configuration
+   utilisation
