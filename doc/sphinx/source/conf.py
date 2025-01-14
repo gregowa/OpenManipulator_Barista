@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'latex_tutorial'
+project = 'Openmanipulator Barista'
 copyright = '2025, Grégory WAILLE'
 author = 'Grégory WAILLE'
 
