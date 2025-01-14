@@ -55,7 +55,10 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-de-la-raspberry">Configuration de la Raspberry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration-pour-la-picamera">Configuration pour la PiCamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-pour-la-picamera">Configuration pour la PiCamera</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-pour-l-openmanipulator">Configuration pour l’OpenManipulator</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -105,6 +108,27 @@
 </section>
 <section id="configuration-pour-la-picamera">
 <h2>Configuration pour la PiCamera<a class="headerlink" href="#configuration-pour-la-picamera" title="Lien vers cette rubrique"></a></h2>
+<section id="configuration-pour-l-openmanipulator">
+<h3>Configuration pour l’OpenManipulator<a class="headerlink" href="#configuration-pour-l-openmanipulator" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic simple">
+<li><p>Installation de ros2launch</p></li>
+<li><p>Installation des outils pour OpenManipulator</p></li>
+<li><p>source~/.bashrc</p></li>
+<li><p>sudo apt-get install ros-noetic-ros-controllers ros-noetic-gazebo* ros-noetic-moveit* ros-noetic-industrial-core</p></li>
+<li><p>sudo apt install ros-noetic-dynamixel-sdk ros-noetic-dynamixel-workbench*</p></li>
+<li><p>sudo apt install ros-noetic-robotis-manipulator</p></li>
+<li><p>Installer catkin et configurer le dossier catkin_ws/src</p></li>
+</ol>
+<p><strong>Erreur</strong> rencontrée lors du catkin_make</p>
+<p><strong>Solution</strong> : installation de python3-catkin-tools + réinstallation de tous les packages ROS Noetic.
+Attention, l’installation peut bloquer en court de route à cause de ressources insuffisantes
+(blocage à 50-60% de l’installation dans notre cas).
+Pour éviter de faire surchauffer la carte et de permettre à l’installation d’aboutir :</p>
+<ul class="simple">
+<li><p>Utiliser une alimentation sur secteur (chargeur USB-C 2A) plutôt que sur le port USB d’un ordinateur.</p></li>
+<li><p>Changement de la fréquence d’horloge du CPU à 1500 Hz + catkin_make avec l’option -j1 (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l’installation dans notre cas.</p></li>
+</ul>
+</section>
 </section>
 </section>
 
