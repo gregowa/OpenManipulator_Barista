@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; Documentation Openmanipulator Barista 1.0.0</title>
+  <title>Utilisation &mdash; Documentation Openmanipulator Barista 1.0.0</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -26,8 +26,7 @@
       <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Recherche" href="search.html" />
-    <link rel="prev" title="Documentation OpenManipulator Barista" href="index.html" /> 
+    <link rel="search" title="Recherche" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,9 +50,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Tables des matières</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#materiels-necessaires">Matériels nécessaires</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#materiels-necessaires">Matériels nécessaires</a></li>
 </ul>
 
         </div>
@@ -70,9 +69,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">Utilisation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/intro.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+            <a href="_sources/utilisation.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
   </ul>
   <hr/>
@@ -80,28 +79,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Lien vers cette rubrique"></a></h1>
-<p>OpenManipulator est un bras robotique développé par ROBOTIS. La documentation officielle  du robot est disponible sur <a class="reference external" href="https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/">https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/</a>.</p>
+  <section id="utilisation">
+<h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien vers cette rubrique"></a></h1>
+<ol class="arabic simple">
+<li><p>Ouvrir un nouveau terminal et <strong>lancer ROS</strong> : roscore</p></li>
+<li><dl class="simple">
+<dt>Reconstruire l’espace de travail depuis le dossier catkin_ws<span class="classifier">catkin_make \ clean</span></dt><dd><p>catkin_make}</p>
+</dd>
+</dl>
+</li>
+<li><p>item Source devel/setup.bash : recharge l’espace de travail et permet d”?xecuter la commande (? executer depuis catkin_ws, ? faire ? chaque fois que l’on lance un nouveau noeud ROS).</p></li>
+</ol>
+<p>4. Ouvrir un nouveau terminal et lancer le contr?leur de l’OpenManipulator} : roslaunch open_manipulator_controller open_manipulator_controller.launch . A l’ex?cution de cette commande, les moteurs devraient se raidir et des informations devraient d?filer dans le terminal.
+Si les moteurs ne se raidissent pas, v?rifier que la carte d’alimentation des moteurs est bien aliment?e et que le bouton ON/OFF est bien enclench?.
+5. Ouvrir un nouveau terminal et lancer la t?l?commande pour piloter l’OpenManipulator : roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch}
+6. Tester l’ouverture de la pince par exemple, ? l’aide de la t?l?commande teleop.</p>
+<section id="cr-ation-de-noeuds-ros">
+<h2>Cr?ation de noeuds ROS<a class="headerlink" href="#cr-ation-de-noeuds-ros" title="Lien vers cette rubrique"></a></h2>
+<p>Cette partie d?taille la d?marche pour impl?menter ses propres fonctions pour le pilotage du robot. Les fonctions sont ?crites en Python et seront plac?es dans des fichiers qui constitueront ensuite les diff?rents noeuds ? interfacer sous ROS.</p>
 </section>
-<section id="materiels-necessaires">
-<h1>Matériels nécessaires<a class="headerlink" href="#materiels-necessaires" title="Lien vers cette rubrique"></a></h1>
-<p>Pour ce projet, nous avons utilisé les éléments suivants :</p>
-<figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="_images/setup.jpg"><img alt="Setup pour le contrôle de l'OpenManipulator" src="_images/setup.jpg" style="width: 600px;" />
-</a>
-<figcaption>
-<p><span class="caption-text">Setup pour le contrôle de l’OpenManipulator</span><a class="headerlink" href="#id1" title="Lien vers cette image"></a></p>
-</figcaption>
-</figure>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="index.html" class="btn btn-neutral float-left" title="Documentation OpenManipulator Barista" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-    </div>
+          <footer>
 
   <hr/>
 
