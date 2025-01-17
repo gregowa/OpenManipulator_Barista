@@ -32,7 +32,7 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 	sudo apt update
 	sudo apt upgrade
 
-8. sudo kill-9 <PID> : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l'ID du processus obtenu avec la commande)
+8. ``sudo kill-9 <PID>`` : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l'ID du processus obtenu avec la commande)
 
 .. code-block::
 
@@ -80,10 +80,10 @@ Configuration pour l'OpenManipulator
 
 **Erreur** rencontrée lors du catkin_make
 
-**Solution** : installation de python3-catkin-tools + réinstallation de tous les packages ROS Noetic. 
+**Solution** : installation de ``python3-catkin-tools`` + réinstallation de tous les packages ROS Noetic. 
 Attention, l'installation peut bloquer en court de route à cause de ressources insuffisantes 
 (blocage à 50-60% de l'installation dans notre cas). 
 Pour éviter de faire surchauffer la carte et de permettre à l'installation d'aboutir : 
 
 * Utiliser une alimentation sur secteur (chargeur USB-C 2A) plutôt que sur le port USB d'un ordinateur.
-* Changement de la fréquence d'horloge du CPU à 1500 Hz + catkin_make avec l'option -j1 (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l'installation dans notre cas.
+* Changement de la fréquence d'horloge du CPU à 1500 Hz + catkin_make avec l'option ``-j1`` (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l'installation dans notre cas.
