@@ -62,16 +62,17 @@ Configuration pour l'OpenManipulator
 	
 	source~/.bashrc 
 
-4. 
+4. Installation des composants ROS
+
 .. code-block::
 	sudo apt-get install ros-noetic-ros-controllers ros-noetic-gazebo* ros-noetic-moveit* ros-noetic-industrial-core
-5. 
+
+5. Installation pour les moteurs Dynamixel
+
 .. code-block::
 	sudo apt install ros-noetic-dynamixel-sdk ros-noetic-dynamixel-workbench*
-6. 
-.. code-block::
 	sudo apt install ros-noetic-robotis-manipulator
-	
+
 7. Installer catkin et configurer le dossier catkin_ws/src
 
 **Erreur** rencontrée lors du catkin_make
