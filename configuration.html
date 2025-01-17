@@ -120,7 +120,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="8">
-<li><p>sudo kill-9 &lt;PID&gt; : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l’ID du processus obtenu avec la commande)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">kill-9</span> <span class="pre">&lt;PID&gt;</span></code> : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l’ID du processus obtenu avec la commande)</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">-</span><span class="n">e</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">&lt;</span><span class="n">process</span>\<span class="n">_name</span><span class="o">&gt;</span>
 </pre></div>
@@ -166,13 +166,13 @@
 <li><p>Installer catkin et configurer le dossier catkin_ws/src</p></li>
 </ol>
 <p><strong>Erreur</strong> rencontrée lors du catkin_make</p>
-<p><strong>Solution</strong> : installation de python3-catkin-tools + réinstallation de tous les packages ROS Noetic.
+<p><strong>Solution</strong> : installation de <code class="docutils literal notranslate"><span class="pre">python3-catkin-tools</span></code> + réinstallation de tous les packages ROS Noetic.
 Attention, l’installation peut bloquer en court de route à cause de ressources insuffisantes
 (blocage à 50-60% de l’installation dans notre cas).
 Pour éviter de faire surchauffer la carte et de permettre à l’installation d’aboutir :</p>
 <ul class="simple">
 <li><p>Utiliser une alimentation sur secteur (chargeur USB-C 2A) plutôt que sur le port USB d’un ordinateur.</p></li>
-<li><p>Changement de la fréquence d’horloge du CPU à 1500 Hz + catkin_make avec l’option -j1 (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l’installation dans notre cas.</p></li>
+<li><p>Changement de la fréquence d’horloge du CPU à 1500 Hz + catkin_make avec l’option <code class="docutils literal notranslate"><span class="pre">-j1</span></code> (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l’installation dans notre cas.</p></li>
 </ul>
 </section>
 </section>
