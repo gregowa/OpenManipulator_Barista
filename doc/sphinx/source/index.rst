@@ -17,3 +17,4 @@ Cette documentation explique comment installer et utiliser un OpenManipulator. U
    intro
    configuration
    utilisation
+   barista
