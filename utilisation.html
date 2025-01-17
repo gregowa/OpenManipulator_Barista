@@ -90,24 +90,39 @@
   <section id="utilisation">
 <h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien vers cette rubrique"></a></h1>
 <ol class="arabic simple">
-<li><p>Ouvrir un nouveau terminal et <strong>lancer ROS</strong> : roscore</p></li>
+<li><p>Ouvrir un nouveau terminal et <strong>lancer ROS</strong> :</p></li>
+</ol>
+<div class="highlight-roscore notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
 <li><p>Reconstruire l’espace de travail depuis le dossier catkin_ws :</p></li>
 </ol>
 <ol class="arabic simple" start="3">
-<li><p>Recharger l’espace de travail et permet d’éxecuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l’on lance un nouveau noeud ROS).</p></li>
+<li><p>Recharger l’espace de travail et permet d’exécuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l’on lance un nouveau noeud ROS).</p></li>
 </ol>
 <ol class="arabic simple" start="4">
-<li><p>Ouvrir un nouveau terminal et lancer le contrôleur de l’OpenManipulator} :</p></li>
+<li><p>Ouvrir un nouveau terminal et lancer le contrôleur de l’OpenManipulator :</p></li>
 </ol>
 <p>A l’exécution de cette commande, les moteurs devraient se raidir et des informations devraient défiler dans le terminal.
-Si les moteurs ne se raidissent pas, vérifier que la carte d’alimentation des moteurs est bien alimentée et que le bouton ON/OFF est bien enclenché.
-5. Ouvrir un nouveau terminal et lancer la télécommande pour piloter l’OpenManipulator :</p>
+Si les moteurs ne se raidissent pas, vérifier que la carte d’alimentation des moteurs est bien alimentée et que le bouton ON/OFF est bien enclenché.</p>
+<ol class="arabic simple" start="5">
+<li><p>Ouvrir un nouveau terminal et lancer la télécommande pour piloter l’OpenManipulator :</p></li>
+</ol>
 <ol class="arabic simple" start="6">
 <li><p>Tester l’ouverture de la pince par exemple, à l’aide de la télécommande teleop.</p></li>
 </ol>
 <section id="creation-de-noeuds-ros">
 <h2>Création de noeuds ROS<a class="headerlink" href="#creation-de-noeuds-ros" title="Lien vers cette rubrique"></a></h2>
 <p>Cette partie détaille la démarche pour implémenter ses propres fonctions pour le pilotage du robot. Les fonctions sont écrites en Python et seront placées dans des fichiers qui constitueront ensuite les différents noeuds à interfacer sous ROS.</p>
+<ul class="simple">
+<li><p>Créer un package dans un fichier au format XML placé dans le dossier source du projet (contenant le code des différents noeuds)</p></li>
+</ul>
+<ul class="simple">
+<li><p>On pourra ensuite créer un launch file, ce fichier permet d’exécuter plusieurs noeuds ROS à la fois.</p></li>
+</ul>
+<p>Exemple de launch file pour turtlesim :</p>
+<p>Exemple de fonction écrite en Python et pouvant être implémentée dans un noeud ROS</p>
 </section>
 </section>
 
