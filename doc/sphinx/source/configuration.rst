@@ -20,6 +20,7 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
    sudo ip linksetwlan0 up
 
 7. Récupérer les mises à jour nécessaires : 
+
 .. code-block::
 
 	sudo apt update
@@ -46,6 +47,7 @@ Configuration pour l'OpenManipulator
 1. Installation de ros2launch
 2. Installation des outils pour OpenManipulator
 3. Aller au bashrc
+
 .. code-block::
 	source~/.bashrc 
 
