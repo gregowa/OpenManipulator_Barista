@@ -15,6 +15,7 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 5. Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + application des changements une fois les modifications terminées :
 
 .. code-block::
+
 	sudo netplan apply
 
 6. Vérifier que la connexion est active : Commande ip a pour voir si la connexion est active, si à l'état down :
@@ -65,11 +66,13 @@ Configuration pour l'OpenManipulator
 4. Installation des composants ROS
 
 .. code-block::
+
 	sudo apt-get install ros-noetic-ros-controllers ros-noetic-gazebo* ros-noetic-moveit* ros-noetic-industrial-core
 
 5. Installation pour les moteurs Dynamixel
 
 .. code-block::
+
 	sudo apt install ros-noetic-dynamixel-sdk ros-noetic-dynamixel-workbench*
 	sudo apt install ros-noetic-robotis-manipulator
 

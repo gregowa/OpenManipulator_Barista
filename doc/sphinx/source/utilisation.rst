@@ -70,8 +70,7 @@ Cette partie détaille la démarche pour implémenter ses propres fonctions pour
     <!-- Example: -->
     <!-- <url type="website">http://wiki.ros.org/robot_barista</url> -->
 
-* On pourra ensuite créer un launch file, ce fichier permet d'exécuter plusieurs noeuds ROS à la fois.
-Exemple de launch file pour turtlesim : 
+* On pourra ensuite créer un launch file, ce fichier permet d'exécuter plusieurs noeuds ROS à la fois. Exemple de launch file pour turtlesim : 
 
 .. code-block::
 
@@ -79,8 +78,8 @@ Exemple de launch file pour turtlesim :
     <node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/>
     <node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim2"/>
     <node pkg="turtlesim" exec="mimic" name="mimic">
-        <remap from="/input/pose" to="/turtlesim1/turtle1/pose"/>
-        <remap from="/output/cmd_vel" to="/turtlesim2/turtle1/cmd_vel"/>
+    <remap from="/input/pose" to="/turtlesim1/turtle1/pose"/>
+    <remap from="/output/cmd_vel" to="/turtlesim2/turtle1/cmd_vel"/>
     </node>
     </launch>
 
@@ -88,7 +87,7 @@ Exemple de launch file pour turtlesim :
 Exemple de fonction écrite en Python et pouvant être implémentée dans un noeud ROS
 
 .. code-block::
-    
+
     def recherche_gobelet(color_id):
     # récupération du flux vidéo
     cap = cv2.VideoCapture(0)
