@@ -33,10 +33,15 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 Configuration pour la PiCamera
 ----------------------
 
-A compléter
+Pour la PiCamera, les étapes d'installation sont détaillées dans ce tutoriel : 
+`<https://chuckmails.medium.com/enable-pi-camera-with-raspberry-pi4-ubuntu-20-10-327208312f6e>`_.
+
+.. note::
+
+	La résolution de l'erreur suivante est également détaillée : “Your firmwave appears to be out of date (no start_x.elf). Please update”
 
 Configuration pour l'OpenManipulator
-______________________
+----------------------
 
 1. Installation de ros2launch
 2. Installation des outils pour OpenManipulator
