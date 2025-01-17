@@ -89,17 +89,20 @@
 <h1>Utilisation<a class="headerlink" href="#utilisation" title="Lien vers cette rubrique"></a></h1>
 <ol class="arabic simple">
 <li><p>Ouvrir un nouveau terminal et <strong>lancer ROS</strong> : roscore</p></li>
-<li><dl class="simple">
-<dt>Reconstruire l’espace de travail depuis le dossier catkin_ws<span class="classifier">catkin_make \ clean</span></dt><dd><p>catkin_make}</p>
-</dd>
-</dl>
-</li>
-<li><p>item Source devel/setup.bash : recharge l’espace de travail et permet d’éxecuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l’on lance un nouveau noeud ROS).</p></li>
+<li><p>Reconstruire l’espace de travail depuis le dossier catkin_ws :</p></li>
 </ol>
-<p>4. Ouvrir un nouveau terminal et lancer le contrôleur de l’OpenManipulator} : roslaunch open_manipulator_controller open_manipulator_controller.launch . A l’exécution de cette commande, les moteurs devraient se raidir et des informations devraient défiler dans le terminal.
+<ol class="arabic simple" start="3">
+<li><p>Recharger l’espace de travail et permet d’éxecuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l’on lance un nouveau noeud ROS).</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Ouvrir un nouveau terminal et lancer le contrôleur de l’OpenManipulator} :</p></li>
+</ol>
+<p>A l’exécution de cette commande, les moteurs devraient se raidir et des informations devraient défiler dans le terminal.
 Si les moteurs ne se raidissent pas, vérifier que la carte d’alimentation des moteurs est bien alimentée et que le bouton ON/OFF est bien enclenché.
-5. Ouvrir un nouveau terminal et lancer la télécommande pour piloter l’OpenManipulator : roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch}
-6. Tester l’ouverture de la pince par exemple, à l’aide de la télécommande teleop.</p>
+5. Ouvrir un nouveau terminal et lancer la télécommande pour piloter l’OpenManipulator :</p>
+<ol class="arabic simple" start="6">
+<li><p>Tester l’ouverture de la pince par exemple, à l’aide de la télécommande teleop.</p></li>
+</ol>
 <section id="creation-de-noeuds-ros">
 <h2>Création de noeuds ROS<a class="headerlink" href="#creation-de-noeuds-ros" title="Lien vers cette rubrique"></a></h2>
 <p>Cette partie détaille la démarche pour implémenter ses propres fonctions pour le pilotage du robot. Les fonctions sont écrites en Python et seront placées dans des fichiers qui constitueront ensuite les différents noeuds à interfacer sous ROS.</p>
