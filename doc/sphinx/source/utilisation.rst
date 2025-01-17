@@ -7,14 +7,14 @@ Utilisation
 
     roscore
 
-2. Reconstruire l'espace de travail depuis le dossier catkin_ws :  
+2. Reconstruire l'espace de travail depuis le dossier ``catkin_ws`` :  
 
 .. code-block::
 
     catkin_make  
     clean catkin_make
     
-3. Recharger l'espace de travail et permet d'exécuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l'on lance un nouveau noeud ROS).
+3. Recharger l'espace de travail et permet d'exécuter la commande (à exécuter depuis ``catkin_ws``, à faire à chaque fois que l'on lance un nouveau noeud ROS).
 
 .. code_block::
 
@@ -33,7 +33,7 @@ Si les moteurs ne se raidissent pas, vérifier que la carte d'alimentation des m
 
 .. code-block::
 
-    roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch}
+    roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch
 
 6. Tester l'ouverture de la pince par exemple, à l'aide de la télécommande teleop.
 

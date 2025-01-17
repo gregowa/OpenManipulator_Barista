@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Openmanipulator Barista'
-copyright = '2025, Grégory WAILLE'
-author = 'Grégory WAILLE'
+copyright = '2025, Valentin GIRARDET, Clément TASSART, Arthur VARLET & Grégory WAILLE'
+author = 'Valentin GIRARDET, Clément TASSART, Arthur VARLET & Grégory WAILL'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
