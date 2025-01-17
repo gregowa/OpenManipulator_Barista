@@ -94,10 +94,10 @@
 <p>Cette section explique comment installer et configurer les différents éléments du projet.</p>
 <section id="configuration-de-la-raspberry">
 <h2>Configuration de la Raspberry<a class="headerlink" href="#configuration-de-la-raspberry" title="Lien vers cette rubrique"></a></h2>
-<p>Pour ce projet, nous sommes partis d’une Rasberry Pi 4 et d’une carte SD neuve sur laquelle aucun système d’exploitation n’avait été installé. Les étapes de configuration de la Rasberry Pi sont détaillés dans cette partie.</p>
+<p>Pour ce projet, nous sommes partis d’une Raspberry Pi 4 et d’une carte SD neuve sur laquelle aucun système d’exploitation n’avait été installé. Les étapes de configuration de la Raspberry Pi sont détaillées dans cette partie.</p>
 <ol class="arabic simple">
 <li><p>Installation de Ubuntu Lite via Pi Imager : la version Desktop souhaitée pour utiliser le bras robot OpenManipulator sous ROS Noetic n’étant pas disponible, on doit installer la version Lite (sans interface graphique).</p></li>
-<li><p>Branchement de la Rasberry à un clavier, un écran et une souris</p></li>
+<li><p>Branchement de la Raspberry à un clavier, un écran et une souris</p></li>
 <li><p>Création d’un mot de passe</p></li>
 <li><p>Configuration du clavier en azerty</p></li>
 <li><p>Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + application des changements une fois les modifications terminées :</p></li>
@@ -126,7 +126,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="9">
-<li><p>Installer Ubuntu desktop et reboot la Rasberry pour que la configuration se mette à jour</p></li>
+<li><p>Installer Ubuntu desktop et reboot la Raspberry pour que la configuration se mette à jour</p></li>
 <li><p>Installer ROS + VS code et Python directement dans VS code</p></li>
 </ol>
 </section>
@@ -163,7 +163,7 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
-<li><p>Installer catkin et configurer le dossier catkin_ws/src</p></li>
+<li><p>Installer catkin et configurer le dossier <code class="docutils literal notranslate"><span class="pre">catkin_ws/src</span></code></p></li>
 </ol>
 <p><strong>Erreur</strong> rencontrée lors du catkin_make</p>
 <p><strong>Solution</strong> : installation de <code class="docutils literal notranslate"><span class="pre">python3-catkin-tools</span></code> + réinstallation de tous les packages ROS Noetic.
@@ -172,7 +172,7 @@ Attention, l’installation peut bloquer en court de route à cause de ressource
 Pour éviter de faire surchauffer la carte et de permettre à l’installation d’aboutir :</p>
 <ul class="simple">
 <li><p>Utiliser une alimentation sur secteur (chargeur USB-C 2A) plutôt que sur le port USB d’un ordinateur.</p></li>
-<li><p>Changement de la fréquence d’horloge du CPU à 1500 Hz + catkin_make avec l’option <code class="docutils literal notranslate"><span class="pre">-j1</span></code> (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l’installation dans notre cas.</p></li>
+<li><p>Changement de la fréquence d’horloge du CPU à 1500 Hz + <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code> avec l’option <code class="docutils literal notranslate"><span class="pre">-j1</span></code> (réduit le nombre de tâches parallèles) : résoud le problème et va au bout de l’installation dans notre cas.</p></li>
 </ul>
 </section>
 </section>
@@ -188,7 +188,7 @@ Pour éviter de faire surchauffer la carte et de permettre à l’installation d
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Droits d'auteur 2025, Grégory WAILLE.</p>
+    <p>&#169; Droits d'auteur 2025, Valentin GIRARDET, Clément TASSART, Arthur VARLET &amp; Grégory WAILLE.</p>
   </div>
 
   Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un

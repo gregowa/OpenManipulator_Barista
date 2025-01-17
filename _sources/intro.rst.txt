@@ -1,7 +1,11 @@
 Introduction
 ============
 
-OpenManipulator est un bras robotique développé par ROBOTIS. La documentation officielle  du robot est disponible sur `<https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/>`_.
+OpenManipulator est un bras robotique développé par ROBOTIS. La documentation officielle du robot est disponible ci dessous :
+
+.. note::
+   
+   `<https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/>`_.
 
 Matériels nécessaires
 =====================
