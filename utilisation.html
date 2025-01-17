@@ -153,15 +153,14 @@ Si les moteurs ne se raidissent pas, vérifier que la carte d’alimentation des
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>On pourra ensuite créer un launch file, ce fichier permet d’exécuter plusieurs noeuds ROS à la fois.</p></li>
+<li><p>On pourra ensuite créer un launch file, ce fichier permet d’exécuter plusieurs noeuds ROS à la fois. Exemple de launch file pour turtlesim :</p></li>
 </ul>
-<p>Exemple de launch file pour turtlesim :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">launch</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">node</span> <span class="n">pkg</span><span class="o">=</span><span class="s2">&quot;turtlesim&quot;</span> <span class="n">exec</span><span class="o">=</span><span class="s2">&quot;turtlesim_node&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sim&quot;</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;turtlesim1&quot;</span><span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">node</span> <span class="n">pkg</span><span class="o">=</span><span class="s2">&quot;turtlesim&quot;</span> <span class="n">exec</span><span class="o">=</span><span class="s2">&quot;turtlesim_node&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sim&quot;</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;turtlesim2&quot;</span><span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">node</span> <span class="n">pkg</span><span class="o">=</span><span class="s2">&quot;turtlesim&quot;</span> <span class="n">exec</span><span class="o">=</span><span class="s2">&quot;mimic&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mimic&quot;</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">remap</span> <span class="n">from</span><span class="o">=</span><span class="s2">&quot;/input/pose&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/turtlesim1/turtle1/pose&quot;</span><span class="o">/&gt;</span>
-    <span class="o">&lt;</span><span class="n">remap</span> <span class="n">from</span><span class="o">=</span><span class="s2">&quot;/output/cmd_vel&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/turtlesim2/turtle1/cmd_vel&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">remap</span> <span class="n">from</span><span class="o">=</span><span class="s2">&quot;/input/pose&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/turtlesim1/turtle1/pose&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">remap</span> <span class="n">from</span><span class="o">=</span><span class="s2">&quot;/output/cmd_vel&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/turtlesim2/turtle1/cmd_vel&quot;</span><span class="o">/&gt;</span>
 <span class="o">&lt;/</span><span class="n">node</span><span class="o">&gt;</span>
 <span class="o">&lt;/</span><span class="n">launch</span><span class="o">&gt;</span>
 </pre></div>

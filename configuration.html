@@ -102,6 +102,9 @@
 <li><p>Configuration du clavier en azerty</p></li>
 <li><p>Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + application des changements une fois les modifications terminées :</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">netplan</span> <span class="n">apply</span>
+</pre></div>
+</div>
 <ol class="arabic simple" start="6">
 <li><p>Vérifier que la connexion est active : Commande ip a pour voir si la connexion est active, si à l’état down :</p></li>
 </ol>
@@ -149,9 +152,16 @@
 <ol class="arabic simple" start="4">
 <li><p>Installation des composants ROS</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">ros</span><span class="o">-</span><span class="n">controllers</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">gazebo</span><span class="o">*</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">moveit</span><span class="o">*</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">industrial</span><span class="o">-</span><span class="n">core</span>
+</pre></div>
+</div>
 <ol class="arabic simple" start="5">
 <li><p>Installation pour les moteurs Dynamixel</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">dynamixel</span><span class="o">-</span><span class="n">sdk</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">dynamixel</span><span class="o">-</span><span class="n">workbench</span><span class="o">*</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">noetic</span><span class="o">-</span><span class="n">robotis</span><span class="o">-</span><span class="n">manipulator</span>
+</pre></div>
+</div>
 <ol class="arabic simple" start="7">
 <li><p>Installer catkin et configurer le dossier catkin_ws/src</p></li>
 </ol>
