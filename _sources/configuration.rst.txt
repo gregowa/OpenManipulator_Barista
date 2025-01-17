@@ -12,11 +12,16 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 2. Branchement de la Rasberry à un clavier, un écran et une souris
 3. Création d'un mot de passe
 4. Configuration du clavier en azerty
-5. Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + sudo netplan apply une fois les modifications terminées
+5. Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + application des changements une fois les modifications terminées :
+
+.. code-block::
+	sudo netplan apply
+
 6. Vérifier que la connexion est active : Commande ip a pour voir si la connexion est active, si à l'état down :
 
 .. code-block::
-
+	
+	ip a
    sudo ip linksetwlan0 up
 
 7. Récupérer les mises à jour nécessaires : 
@@ -26,7 +31,12 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 	sudo apt update
 	sudo apt upgrade
 
-8. sudo kill-9 <PID> : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l'ID du processus obtenu avec la commande ps -e | grep <process\_name>)
+8. sudo kill-9 <PID> : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l'ID du processus obtenu avec la commande)
+
+.. code-block::
+	
+	ps -e | grep <process\_name>
+
 9. Installer Ubuntu desktop et reboot la Rasberry pour que la configuration se mette à jour
 10. Installer ROS + VS code et Python directement dans VS code
 
