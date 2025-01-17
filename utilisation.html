@@ -92,23 +92,33 @@
 <ol class="arabic simple">
 <li><p>Ouvrir un nouveau terminal et <strong>lancer ROS</strong> :</p></li>
 </ol>
-<div class="highlight-roscore notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>Reconstruire l’espace de travail depuis le dossier catkin_ws :</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">catkin_make</span>
+<span class="n">clean</span> <span class="n">catkin_make</span>
+</pre></div>
+</div>
 <ol class="arabic simple" start="3">
 <li><p>Recharger l’espace de travail et permet d’exécuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l’on lance un nouveau noeud ROS).</p></li>
 </ol>
 <ol class="arabic simple" start="4">
 <li><p>Ouvrir un nouveau terminal et lancer le contrôleur de l’OpenManipulator :</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">open_manipulator_controller</span> <span class="n">open_manipulator_controller</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
 <p>A l’exécution de cette commande, les moteurs devraient se raidir et des informations devraient défiler dans le terminal.
 Si les moteurs ne se raidissent pas, vérifier que la carte d’alimentation des moteurs est bien alimentée et que le bouton ON/OFF est bien enclenché.</p>
 <ol class="arabic simple" start="5">
 <li><p>Ouvrir un nouveau terminal et lancer la télécommande pour piloter l’OpenManipulator :</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">open_manipulator_teleop</span> <span class="n">open_manipulator_teleop_keyboard</span><span class="o">.</span><span class="n">launch</span><span class="p">}</span>
+</pre></div>
+</div>
 <ol class="arabic simple" start="6">
 <li><p>Tester l’ouverture de la pince par exemple, à l’aide de la télécommande teleop.</p></li>
 </ol>
@@ -118,11 +128,75 @@ Si les moteurs ne se raidissent pas, vérifier que la carte d’alimentation des
 <ul class="simple">
 <li><p>Créer un package dans un fichier au format XML placé dans le dossier source du projet (contenant le code des différents noeuds)</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;package format=&quot;2&quot;&gt;
+&lt;name&gt;robot_barista&lt;/name&gt;
+&lt;version&gt;0.0.0&lt;/version&gt;
+&lt;description&gt;The robot_barista package&lt;/description&gt;
+
+&lt;!-- One maintainer tag required, multiple allowed, one person per tag --&gt;
+&lt;!-- Example:  --&gt;
+&lt;!-- &lt;maintainer email=&quot;jane.doe@example.com&quot;&gt;Jane Doe&lt;/maintainer&gt; --&gt;
+&lt;maintainer email=&quot;ubuntu@todo.todo&quot;&gt;ubuntu&lt;/maintainer&gt;
+
+
+&lt;!-- One license tag required, multiple allowed, one license per tag --&gt;
+&lt;!-- Commonly used license strings: --&gt;
+&lt;!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 --&gt;
+&lt;license&gt;TODO&lt;/license&gt;
+
+
+&lt;!-- Url tags are optional, but multiple are allowed, one per tag --&gt;
+&lt;!-- Optional attribute type can be: website, bugtracker, or repository --&gt;
+&lt;!-- Example: --&gt;
+&lt;!-- &lt;url type=&quot;website&quot;&gt;http://wiki.ros.org/robot_barista&lt;/url&gt; --&gt;
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>On pourra ensuite créer un launch file, ce fichier permet d’exécuter plusieurs noeuds ROS à la fois.</p></li>
 </ul>
 <p>Exemple de launch file pour turtlesim :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">launch</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">node</span> <span class="n">pkg</span><span class="o">=</span><span class="s2">&quot;turtlesim&quot;</span> <span class="n">exec</span><span class="o">=</span><span class="s2">&quot;turtlesim_node&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sim&quot;</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;turtlesim1&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">node</span> <span class="n">pkg</span><span class="o">=</span><span class="s2">&quot;turtlesim&quot;</span> <span class="n">exec</span><span class="o">=</span><span class="s2">&quot;turtlesim_node&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sim&quot;</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;turtlesim2&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">node</span> <span class="n">pkg</span><span class="o">=</span><span class="s2">&quot;turtlesim&quot;</span> <span class="n">exec</span><span class="o">=</span><span class="s2">&quot;mimic&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;mimic&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">remap</span> <span class="n">from</span><span class="o">=</span><span class="s2">&quot;/input/pose&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/turtlesim1/turtle1/pose&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">remap</span> <span class="n">from</span><span class="o">=</span><span class="s2">&quot;/output/cmd_vel&quot;</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;/turtlesim2/turtle1/cmd_vel&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">node</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">launch</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 <p>Exemple de fonction écrite en Python et pouvant être implémentée dans un noeud ROS</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">recherche_gobelet</span><span class="p">(</span><span class="n">color_id</span><span class="p">):</span>
+<span class="c1"># récupération du flux vidéo</span>
+<span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">logerr</span><span class="p">(</span><span class="s2">&quot;Erreur : Impossible d&#39;ouvrir la caméra.&quot;</span><span class="p">)</span>
+    <span class="k">return</span>
+
+<span class="n">last_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appuyez sur &#39;q&#39; pour quitter.&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">x_coord</span> <span class="o">=</span> <span class="n">detect_color</span><span class="p">(</span><span class="n">cap</span><span class="p">,</span> <span class="n">color_id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x_coord</span><span class="p">)</span>
+        <span class="c1"># Tant que la couleur n&#39;est pas détectée au centre de l&#39;image (à +/- 150 pixels)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="o">-</span><span class="mi">150</span> <span class="o">&lt;=</span> <span class="n">x_coord</span> <span class="o">&lt;=</span> <span class="mi">150</span><span class="p">):</span>
+            <span class="n">move_robot</span><span class="o">.</span><span class="n">move_joints_relative</span><span class="p">(</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># Trajectoire circulaire</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+            <span class="k">break</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.35</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arrêt du programme.&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 </section>
 

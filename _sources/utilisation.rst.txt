@@ -4,22 +4,26 @@ Utilisation
 1. Ouvrir un nouveau terminal et **lancer ROS** : 
 
 .. code-block::
+
     roscore
 
 2. Reconstruire l'espace de travail depuis le dossier catkin_ws :  
 
 .. code-block::
+
     catkin_make  
     clean catkin_make
     
 3. Recharger l'espace de travail et permet d'exécuter la commande (à exécuter depuis catkin_ws, à faire à chaque fois que l'on lance un nouveau noeud ROS).
 
 .. code_block::
+
     source devel/setup.bash 
 
 4. Ouvrir un nouveau terminal et lancer le contrôleur de l'OpenManipulator : 
 
 .. code-block::
+
     roslaunch open_manipulator_controller open_manipulator_controller.launch 
 
 A l'exécution de cette commande, les moteurs devraient se raidir et des informations devraient défiler dans le terminal. 
@@ -28,6 +32,7 @@ Si les moteurs ne se raidissent pas, vérifier que la carte d'alimentation des m
 5. Ouvrir un nouveau terminal et lancer la télécommande pour piloter l'OpenManipulator : 
 
 .. code-block::
+
     roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch}
 
 6. Tester l'ouverture de la pince par exemple, à l'aide de la télécommande teleop.
@@ -41,6 +46,7 @@ Cette partie détaille la démarche pour implémenter ses propres fonctions pour
 * Créer un package dans un fichier au format XML placé dans le dossier source du projet (contenant le code des différents noeuds)
 
 .. code-block::
+
     <?xml version="1.0"?>
     <package format="2">
     <name>robot_barista</name>
@@ -68,6 +74,7 @@ Cette partie détaille la démarche pour implémenter ses propres fonctions pour
 Exemple de launch file pour turtlesim : 
 
 .. code-block::
+
     <launch>
     <node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim1"/>
     <node pkg="turtlesim" exec="turtlesim_node" name="sim" namespace="turtlesim2"/>
@@ -81,6 +88,7 @@ Exemple de launch file pour turtlesim :
 Exemple de fonction écrite en Python et pouvant être implémentée dans un noeud ROS
 
 .. code-block::
+    
     def recherche_gobelet(color_id):
     # récupération du flux vidéo
     cap = cv2.VideoCapture(0)
