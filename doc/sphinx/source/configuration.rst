@@ -34,7 +34,7 @@ Pour ce projet, nous sommes partis d'une Rasberry Pi 4 et d'une carte SD neuve s
 8. sudo kill-9 <PID> : pour arrêter les processus qui tournent et produisent des erreurs (PID : remplacer par l'ID du processus obtenu avec la commande)
 
 .. code-block::
-	
+
 	ps -e | grep <process\_name>
 
 9. Installer Ubuntu desktop et reboot la Rasberry pour que la configuration se mette à jour
@@ -59,6 +59,7 @@ Configuration pour l'OpenManipulator
 3. Aller au bashrc
 
 .. code-block::
+	
 	source~/.bashrc 
 
 4. 
@@ -70,6 +71,7 @@ Configuration pour l'OpenManipulator
 6. 
 .. code-block::
 	sudo apt install ros-noetic-robotis-manipulator
+	
 7. Installer catkin et configurer le dossier catkin_ws/src
 
 **Erreur** rencontrée lors du catkin_make
