@@ -4,14 +4,14 @@ Utilisation
 1. Ouvrir un nouveau terminal et **lancer ROS** : roscore
 2. Reconstruire l'espace de travail depuis le dossier catkin_ws :  catkin\_make \\ clean
     catkin_make} 
-3. item Source devel/setup.bash : recharge l'espace de travail et permet d'Èxecuter la commande (‡ executer depuis catkin_ws, ‡ faire ‡ chaque fois que l'on lance un nouveau noeud ROS).
-4. Ouvrir un nouveau terminal et lancer le contrÙleur de l'OpenManipulator} : roslaunch open_manipulator_controller open_manipulator_controller.launch . A l'exÈcution de cette commande, les moteurs devraient se raidir et des informations devraient dÈfiler dans le terminal. 
-Si les moteurs ne se raidissent pas, vÈrifier que la carte d'alimentation des moteurs est bien alimentÈe et que le bouton ON/OFF est bien enclenchÈ.
-5. Ouvrir un nouveau terminal et lancer la tÈlÈcommande pour piloter l'OpenManipulator : roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch}
-6. Tester l'ouverture de la pince par exemple, ‡ l'aide de la tÈlÈcommande teleop.
+3. item Source devel/setup.bash : recharge l'espace de travail et permet d'√©xecuter la commande (√† ex√©cuter depuis catkin_ws, √† faire √† chaque fois que l'on lance un nouveau noeud ROS).
+4. Ouvrir un nouveau terminal et lancer le contr√¥leur de l'OpenManipulator} : roslaunch open_manipulator_controller open_manipulator_controller.launch . A l'ex√©cution de cette commande, les moteurs devraient se raidir et des informations devraient d√©filer dans le terminal. 
+Si les moteurs ne se raidissent pas, v√©rifier que la carte d'alimentation des moteurs est bien aliment√©e et que le bouton ON/OFF est bien enclench√©.
+5. Ouvrir un nouveau terminal et lancer la t√©l√©commande pour piloter l'OpenManipulator : roslaunch open_manipulator_teleop open_manipulator_teleop_keyboard.launch}
+6. Tester l'ouverture de la pince par exemple, √† l'aide de la t√©l√©commande teleop.
 
 
-CrÈation de noeuds ROS
+Cr√©ation de noeuds ROS
 ______________________
 
-Cette partie dÈtaille la dÈmarche pour implÈmenter ses propres fonctions pour le pilotage du robot. Les fonctions sont Ècrites en Python et seront placÈes dans des fichiers qui constitueront ensuite les diffÈrents noeuds ‡ interfacer sous ROS.
+Cette partie d√©taille la d√©marche pour impl√©menter ses propres fonctions pour le pilotage du robot. Les fonctions sont √©crites en Python et seront plac√©es dans des fichiers qui constitueront ensuite les diff√©rents noeuds √† interfacer sous ROS.

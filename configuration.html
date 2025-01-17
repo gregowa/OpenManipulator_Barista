@@ -102,12 +102,11 @@
 <li><p>Création d’un mot de passe</p></li>
 <li><p>Configuration du clavier en azerty</p></li>
 <li><p>Configuration de la connexion internet :  Modifier le fichier netplan avec le nom du réseau auquel se connecter + sudo netplan apply une fois les modifications terminées</p></li>
+<li><p>Vérifier que la connexion est active : Commande ip a pour voir si la connexion est active, si à l’état down :</p></li>
 </ol>
-<p>6. Vérifier que la connexion est active : Commande ip a pour voir si la connexion est active, si à l’état down :
-.. code-block:: bash</p>
-<blockquote>
-<div><p>sudo ip linksetwlan0 up</p>
-</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>linksetwlan0<span class="w"> </span>up
+</pre></div>
+</div>
 <p>7. Récupérer les mises à jour nécessaires :
 .. code-block:: bash</p>
 <blockquote>
